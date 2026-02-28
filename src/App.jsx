@@ -6,7 +6,7 @@ import './index.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/team-page-draft">
       <div className="app">
         <Routes>
           <Route path="/" element={

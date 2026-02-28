@@ -16,46 +16,48 @@ const Timeline = () => {
             <div className="container">
 
                 <div className="timeline-header animate-fade-in">
-                    <h2>Tangible steps toward<span className="highlight">laser-processed B4C and SiC coatings</span></h2>
-                    <p>A chronological roadmap tracing our progress over the last year, highlighting 6 critical publications.</p>
+                    <h2>Tangible steps toward<span className="highlight">laser-processed B<sub>4</sub>C and SiC coatings</span></h2>
+                    <p>A roadmap tracing our progress over the last year, highlighting 6 critical publications.</p>
                 </div>
 
                 <div className="timeline-container">
                     {/* Vertical Line */}
                     <div className="timeline-line"></div>
 
-                    {timelineData.map((milestone, index) => {
-                        const isEven = index % 2 === 0;
-                        return (
-                            <div
-                                key={milestone.id}
-                                className={`timeline-item ${isEven ? 'left' : 'right'}`}
-                            >
-                                <div className="timeline-content" onClick={() => openModal(milestone)}>
-                                    <div className="timeline-date">{milestone.date}</div>
-                                    <h3 className="timeline-title">{milestone.title}</h3>
-                                    <div className="timeline-labs">
-                                        {milestone.labs.map(lab => (
-                                            <span
-                                                key={lab}
-                                                className="lab-badge"
-                                                style={{ backgroundColor: `${groupColors[lab]}20`, color: groupColors[lab], border: `1px solid ${groupColors[lab]}50` }}
-                                            >
-                                                {lab}
-                                            </span>
-                                        ))}
+                    {[...timelineData]
+                        .sort((a, b) => new Date(a.date) - new Date(b.date))
+                        .map((milestone, index) => {
+                            const isEven = index % 2 === 0;
+                            return (
+                                <div
+                                    key={milestone.id}
+                                    className={`timeline-item ${isEven ? 'left' : 'right'}`}
+                                >
+                                    <div className="timeline-content" onClick={() => openModal(milestone)}>
+                                        <div className="timeline-date">{milestone.date}</div>
+                                        <h3 className="timeline-title">{milestone.title}</h3>
+                                        <div className="timeline-labs">
+                                            {milestone.labs.map(lab => (
+                                                <span
+                                                    key={lab}
+                                                    className="lab-badge"
+                                                    style={{ backgroundColor: `${groupColors[lab]}20`, color: groupColors[lab], border: `1px solid ${groupColors[lab]}50` }}
+                                                >
+                                                    {lab}
+                                                </span>
+                                            ))}
+                                        </div>
+                                        <div className="timeline-interactive-hint">
+                                            <FileText size={16} /> Read Paper Details
+                                        </div>
                                     </div>
-                                    <div className="timeline-interactive-hint">
-                                        <FileText size={16} /> Read Paper Details
+                                    {/* Timeline node marker */}
+                                    <div className="timeline-node">
+                                        <div className="node-inner"></div>
                                     </div>
                                 </div>
-                                {/* Timeline node marker */}
-                                <div className="timeline-node">
-                                    <div className="node-inner"></div>
-                                </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
                 </div>
             </div>
 

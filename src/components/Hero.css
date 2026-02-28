@@ -57,14 +57,15 @@
 }
 
 .theory-cluster {
-    grid-area: theory;
-    justify-self: flex-end;
-    /* Keep it tight left under the header, aligning its right edge with the column's if needed, or flex-start */
+    grid-area: processing;
+    justify-self: flex-start;
+    /* Move to the right side of the bottom row */
 }
 
 .processing-cluster {
-    grid-area: processing;
-    justify-self: flex-start;
+    grid-area: theory;
+    justify-self: flex-end;
+    /* Move to the left side under the header */
 }
 
 .group-cluster {
