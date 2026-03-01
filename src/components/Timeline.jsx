@@ -10,6 +10,7 @@ const Timeline = () => {
 
     const openModal = (milestone) => setSelectedMilestone(milestone);
     const closeModal = () => setSelectedMilestone(null);
+    const getPiColor = (group) => groupColors[group] || 'var(--text-muted)';
 
     return (
         <section className="timeline-section">
@@ -36,14 +37,23 @@ const Timeline = () => {
                                     <div className="timeline-content" onClick={() => openModal(milestone)}>
                                         <div className="timeline-date">{milestone.date}</div>
                                         <h3 className="timeline-title">{milestone.title}</h3>
+                                        {milestone.image && (
+                                            <div className="timeline-image-wrapper">
+                                                <img src={milestone.image} alt={milestone.title} className="timeline-image" />
+                                            </div>
+                                        )}
                                         <div className="timeline-labs">
-                                            {milestone.labs.map(lab => (
+                                            {milestone.pis && milestone.pis.map(pi => (
                                                 <span
-                                                    key={lab}
+                                                    key={`${pi.name}-${pi.group}`}
                                                     className="lab-badge"
-                                                    style={{ backgroundColor: `${groupColors[lab]}20`, color: groupColors[lab], border: `1px solid ${groupColors[lab]}50` }}
+                                                    style={{
+                                                        backgroundColor: 'transparent',
+                                                        color: getPiColor(pi.group),
+                                                        border: `1px solid ${getPiColor(pi.group)}`
+                                                    }}
                                                 >
-                                                    {lab}
+                                                    {pi.name}
                                                 </span>
                                             ))}
                                         </div>
@@ -72,16 +82,21 @@ const Timeline = () => {
                             <h2>{selectedMilestone.title}</h2>
                             <div className="modal-labs">
                                 <Users size={16} color="var(--text-muted)" />
-                                {selectedMilestone.labs.map((lab, i) => (
-                                    <span key={lab} >
-                                        <Link to={`/group/${lab.toLowerCase()}`} className="modal-lab-link" style={{ color: groupColors[lab] }}>{lab}</Link>
-                                        {i < selectedMilestone.labs.length - 1 ? <span style={{ color: 'var(--text-muted)' }}>, </span> : ''}
+                                {selectedMilestone.pis && selectedMilestone.pis.map((pi, i) => (
+                                    <span key={`${pi.name}-${pi.group}`} >
+                                        <Link to={`/group/${pi.group.toLowerCase()}`} className="modal-lab-link" style={{ color: getPiColor(pi.group) }}>{pi.name}</Link>
+                                        {i < selectedMilestone.pis.length - 1 ? <span style={{ color: 'var(--text-muted)' }}>, </span> : ''}
                                     </span>
                                 ))}
                             </div>
                         </div>
 
                         <div className="modal-body">
+                            {selectedMilestone.image && (
+                                <div className="modal-image-wrapper">
+                                    <img src={selectedMilestone.image} alt={selectedMilestone.title} className="modal-image" />
+                                </div>
+                            )}
                             <div className="paper-info">
                                 <h4>Publication</h4>
                                 <p className="paper-name">{selectedMilestone.paper}</p>

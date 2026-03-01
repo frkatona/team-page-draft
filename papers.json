@@ -3,7 +3,8 @@
         "PIs": [
             "Audri",
             "Priya",
-            "Aiichiro"
+            "Aiichiro",
+            "Alex"
         ],
         "Students": [
             "Nabanankur"
@@ -39,5 +40,48 @@
         "ImageLink": "src/assets/paperImages/Adri_seed-crystal.png",
         "Journal": "J. Phys. Chem. C",
         "Link": "https://pubs.acs.org/doi/10.1021/acs.jpcc.5c05359"
+    },
+    "asdf": {
+        "PIs": [
+            "asdf"
+        ],
+        "Students": [
+            "asdf"
+        ],
+        "publicationDate": [
+            "2026"
+        ],
+        "ImageLink": "asdf",
+        "Journal": "asdf",
+        "Link": "asdf"
+    },
+    "asdf": {
+        "PIs": [
+            "asdf"
+        ],
+        "Students": [
+            "asdf"
+        ],
+        "publicationDate": [
+            "2026"
+        ],
+        "ImageLink": "asdf",
+        "Journal": "asdf",
+        "Link": "asdf"
+    },
+    "asdf": {
+        "PIs": [
+            "asdf"
+        ],
+        "Students": [
+            "asdf"
+        ],
+        "publicationDate": [
+            "2026"
+        ],
+        "ImageLink": "asdf",
+        "Journal": "asdf",
+        "Link": "asdf"
     }
+    
 }
