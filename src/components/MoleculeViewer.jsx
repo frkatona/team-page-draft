@@ -65,7 +65,7 @@ const MoleculeViewer = ({ url, title }) => {
     }
 
     return (
-        <div style={{ width: '100%', height: '100%', minHeight: '300px', backgroundColor: 'white', borderRadius: '10px', overflow: 'hidden' }}
+        <div style={{ width: '100%', height: '100%', backgroundColor: 'white', borderRadius: '10px', overflow: 'hidden' }}
             ref={viewerRef}
             title={title || "Interactive 3D Molecule"}
             className="molecule-viewer-container"

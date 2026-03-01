@@ -137,7 +137,7 @@
     overflow: hidden;
     border: 1px solid var(--border-subtle);
     background-color: var(--bg-dark);
-    height: 180px;
+    height: 220px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -260,6 +260,10 @@
     overflow: hidden;
     border: 1px solid var(--border-subtle);
     background-color: var(--bg-dark);
+    position: relative;
+    /* Contain absolute 3dmol canvas */
+    height: 320px;
+    /* Use exact height to constrain viewer */
 }
 
 .modal-image {
