@@ -7,16 +7,13 @@ const paperImageModules = import.meta.glob('../assets/paperImages/*', {
 
 const timelineMetadata = {
     'Photochemistry and Thermal Chemistry in Polymeric Ceramic Precursors': {
-        id: 'p1',
-        date: 'Feb 2025'
+        id: 'p1'
     },
     'ReaxFF Parameter Set for Boron Clusters and Icosahedral Boron Crystals: Comparison with Density Functional Theory and Machine-Learning Potentials': {
-        id: 'p2',
-        date: 'May 2025'
+        id: 'p2'
     },
     'Atomistic-Scale Simulations of the High-Temperature Chemistry of Si/C/O/H-Based Polymers and Their Conversion to Si/C Solid Materials': {
-        id: 'p3',
-        date: 'Jan 2026'
+        id: 'p3'
     }
 };
 
@@ -60,7 +57,7 @@ export const timelineData = Object.entries(papersData).map(([title, paper], inde
 
     return {
         id: metadata.id || `p${index + 1}`,
-        date: metadata.date || paper.publicationDate?.[0] || 'TBD',
+        date: paper.publicationDate?.[0] || 'TBD',
         title,
         paper: title,
         journal: paper.Journal || '',

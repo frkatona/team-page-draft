@@ -1,16 +1,16 @@
 {
     "Photochemistry and Thermal Chemistry in Polymeric Ceramic Precursors": {
         "PIs": [
-            "Audri",
-            "Priya",
-            "Aiichiro",
-            "Alex"
+            "Audri Van Duin",
+            "Priya Vashishta",
+            "Aiichiro Nakano",
+            "Alex Radosevich"
         ],
         "Students": [
             "Nabanankur"
         ],
         "publicationDate": [
-            "2025"
+            "Feb 2025"
         ],
         "ImageLink": "src/assets/paperImages/Adri_photochem-and-thermal-chemistry.png",
         "Journal": "J. Phys. Chem. Lett.",
@@ -21,7 +21,7 @@
             "Audri"
         ],
         "publicationDate": [
-            "2025"
+            "May 2025"
         ],
         "ImageLink": "src/assets/paperImages/Adri_seed-crystal.png",
         "Journal": "J. Phys. Chem. C",
@@ -29,59 +29,46 @@
     },
     "Atomistic-Scale Simulations of the High-Temperature Chemistry of Si/C/O/H-Based Polymers and Their Conversion to Si/C Solid Materials": {
         "PIs": [
-            "Audri"
+            "Audri Van Duin"
         ],
         "Students": [
             "Asma"
         ],
         "publicationDate": [
-            "2026"
+            "Jan 2026"
         ],
         "ImageLink": "src/assets/paperImages/Adri_seed-crystal.png",
         "Journal": "J. Phys. Chem. C",
         "Link": "https://pubs.acs.org/doi/10.1021/acs.jpcc.5c05359"
     },
-    "asdf": {
+    "Thermal Stereolithography of SiC-Loaded Acrylate Resins with Polymer-Derived Ceramic Infiltration": {
         "PIs": [
-            "asdf"
+            "Robert Hickey", 
+            "Ben Lear"
         ],
         "Students": [
-            "asdf"
+            ""
         ],
         "publicationDate": [
-            "2026"
+            "2025"
         ],
-        "ImageLink": "asdf",
-        "Journal": "asdf",
-        "Link": "asdf"
+        "ImageLink": "src/assets/paperImages/Rob1.png",
+        "Journal": "App. Eng. Mater.",
+        "Link": "https://pubs.acs.org/doi/10.1021/acsaenm.5c00054?fig=&ref=pdf"
     },
-    "asdf": {
+    "Structured Polymer-Derived Ceramic Composites via Near-Infrared Thermal Stereolithography": {
         "PIs": [
-            "asdf"
+            "Robert Hickey",
+            "Ben Lear"
         ],
         "Students": [
-            "asdf"
+            "Charles"
         ],
         "publicationDate": [
-            "2026"
+            "2025"
         ],
-        "ImageLink": "asdf",
-        "Journal": "asdf",
-        "Link": "asdf"
-    },
-    "asdf": {
-        "PIs": [
-            "asdf"
-        ],
-        "Students": [
-            "asdf"
-        ],
-        "publicationDate": [
-            "2026"
-        ],
-        "ImageLink": "asdf",
-        "Journal": "asdf",
-        "Link": "asdf"
+        "ImageLink": "src/assets/paperImages/Rob2.png",
+        "Journal": "App. Polym. Mater.",
+        "Link": "https://pubs.acs.org/doi/10.1021/acsapm.5c00241?fig=tgr1&ref=pdf"
     }
-    
 }
