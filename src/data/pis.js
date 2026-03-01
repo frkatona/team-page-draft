@@ -20,7 +20,7 @@ export const piData = [
   {
     id: 'theory-2',
     name: 'Prof. Aiichiro Nakano',
-    role: 'Neural Network Dynamics',
+    role: 'Exascale Computing',
     group: 'Theory',
     institution: 'USC',
     image: aiichiroNakano,
@@ -28,7 +28,7 @@ export const piData = [
   {
     id: 'theory-3',
     name: 'Prof. Priya Vashishta',
-    role: 'asdf',
+    role: 'Condensed Matter Theory',
     group: 'Theory',
     institution: 'USC',
     image: priyaVashishta,
@@ -46,7 +46,7 @@ export const piData = [
   {
     id: 'synthesis-2',
     name: 'Prof. Rob Hickey',
-    role: 'ROMP Pre-ceramics',
+    role: 'ROMP Routes to Pre-ceramics',
     group: 'Synthesis',
     institution: 'Penn State',
     image: robHickey,
@@ -72,7 +72,7 @@ export const piData = [
   {
     id: 'processing-2',
     name: 'Prof. JP Maria',
-    role: 'Materials Characterization',
+    role: 'Materials & Chemical Characterization',
     group: 'Processing',
     institution: 'Penn State',
     image: jpMaria,
