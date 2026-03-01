@@ -37,13 +37,13 @@
         "publicationDate": [
             "Jan 2026"
         ],
-        "ImageLink": "src/assets/paperImages/Adri_seed-crystal.png",
+        "ImageLink": "src/assets/caffeine.sdf",
         "Journal": "J. Phys. Chem. C",
         "Link": "https://pubs.acs.org/doi/10.1021/acs.jpcc.5c05359"
     },
     "Thermal Stereolithography of SiC-Loaded Acrylate Resins with Polymer-Derived Ceramic Infiltration": {
         "PIs": [
-            "Robert Hickey", 
+            "Robert Hickey",
             "Ben Lear"
         ],
         "Students": [

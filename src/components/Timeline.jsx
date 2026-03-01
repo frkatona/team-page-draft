@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FileText, X, ExternalLink, Users } from 'lucide-react';
 import { timelineData } from '../data/timeline';
 import { groupColors } from '../data/pis';
+import MoleculeViewer from './MoleculeViewer';
 import './Timeline.css';
 
 const Timeline = () => {
@@ -38,7 +39,14 @@ const Timeline = () => {
                                         <h3 className="timeline-title">{milestone.title}</h3>
                                         {milestone.image && (
                                             <div className="timeline-image-wrapper">
-                                                <img src={milestone.image} alt={milestone.title} className="timeline-image" />
+                                                {milestone.image.endsWith('.sdf') ? (
+                                                    <MoleculeViewer
+                                                        url={milestone.image}
+                                                        title={milestone.title}
+                                                    />
+                                                ) : (
+                                                    <img src={milestone.image} alt={milestone.title} className="timeline-image" />
+                                                )}
                                             </div>
                                         )}
                                         <div className="timeline-labs">
@@ -93,7 +101,14 @@ const Timeline = () => {
                         <div className="modal-body">
                             {selectedMilestone.image && (
                                 <div className="modal-image-wrapper">
-                                    <img src={selectedMilestone.image} alt={selectedMilestone.title} className="modal-image" />
+                                    {selectedMilestone.image.endsWith('.sdf') ? (
+                                        <MoleculeViewer
+                                            url={selectedMilestone.image}
+                                            title={selectedMilestone.title}
+                                        />
+                                    ) : (
+                                        <img src={selectedMilestone.image} alt={selectedMilestone.title} className="modal-image" />
+                                    )}
                                 </div>
                             )}
                             <div className="paper-info">

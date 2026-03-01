@@ -6,6 +6,12 @@ const paperImageModules = import.meta.glob('../assets/paperImages/*', {
     import: 'default'
 });
 
+const sdfModules = import.meta.glob('../assets/*.sdf', {
+    eager: true,
+    query: '?url',
+    import: 'default'
+});
+
 const timelineMetadata = {
     'Photochemistry and Thermal Chemistry in Polymeric Ceramic Precursors': {
         id: 'p1'
@@ -123,11 +129,20 @@ const resolvePaperImage = (imageLink) => {
         return null;
     }
 
+    if (imageLink.startsWith('http://') || imageLink.startsWith('https://')) {
+        return imageLink;
+    }
+
     const normalizedPath = imageLink.replace(/\\/g, '/');
     const fileName = normalizedPath.split('/').pop();
-    const moduleKey = `../assets/paperImages/${fileName}`;
 
-    return paperImageModules[moduleKey] || null;
+    if (fileName.endsWith('.sdf')) {
+        const moduleKey = `../assets/${fileName}`;
+        return sdfModules[moduleKey] || null;
+    } else {
+        const moduleKey = `../assets/paperImages/${fileName}`;
+        return paperImageModules[moduleKey] || null;
+    }
 };
 
 const buildDescription = (paper) => {

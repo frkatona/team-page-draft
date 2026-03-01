@@ -141,6 +141,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    /* Ensure absolute children (like 3dmol canvas) stay contained */
 }
 
 .timeline-image {
