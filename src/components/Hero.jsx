@@ -16,7 +16,7 @@ const Hero = () => {
                         Mapping the latest advancements in <span className="highlight">ceramic coatings</span>
                     </h1>
                     <h2 className="mission-subtitle">
-                        uniting <span className="highlight">synthesis</span>, <span className="highlight">processing</span>, and <span className="highlight">theory</span> for advanced materials for in the 2025-2026 MURI ensemble
+                        uniting <span className="highlight">synthesis</span>, <span className="highlight">processing</span>, and <span className="highlight">theory</span> for advanced materials for the 2025-2026 MURI ensemble
                     </h2>
                 </div>
 
