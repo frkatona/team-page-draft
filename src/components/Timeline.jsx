@@ -25,8 +25,7 @@ const Timeline = () => {
                     {/* Vertical Line */}
                     <div className="timeline-line"></div>
 
-                    {[...timelineData]
-                        .sort((a, b) => new Date(a.date) - new Date(b.date))
+                    {timelineData
                         .map((milestone, index) => {
                             const isEven = index % 2 === 0;
                             return (

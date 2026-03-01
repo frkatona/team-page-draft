@@ -12,13 +12,13 @@
         "publicationDate": [
             "Feb 2025"
         ],
-        "ImageLink": "src/assets/paperImages/Adri_photochem-and-thermal-chemistry.png",
+        "ImageLink": "src/assets/paperImages/Adri_seed-crystal.png",
         "Journal": "J. Phys. Chem. Lett.",
         "Link": "https://pubs.acs.org/doi/10.1021/acs.jpclett.5c02429"
     },
     "ReaxFF Parameter Set for Boron Clusters and Icosahedral Boron Crystals: Comparison with Density Functional Theory and Machine-Learning Potentials": {
         "PIs": [
-            "Audri"
+            "Audri Van Duin"
         ],
         "publicationDate": [
             "May 2025"
