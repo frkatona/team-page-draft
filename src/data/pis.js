@@ -20,7 +20,7 @@ export const piData = [
   {
     id: 'theory-2',
     name: 'Prof. Aiichiro Nakano',
-    role: 'Exascale Computing',
+    role: 'Exascale Computing & Machine Learning',
     group: 'Theory',
     institution: 'USC',
     image: aiichiroNakano,

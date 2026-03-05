@@ -42,8 +42,13 @@
     justify-content: flex-end;
     padding-right: 50%;
     position: relative;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     width: 100%;
+}
+
+.timeline-item + .timeline-item {
+    /* Slight vertical overlap works because cards alternate left/right. */
+    margin-top: -3rem;
 }
 
 .timeline-item.right {
@@ -328,6 +333,11 @@
         justify-content: flex-start;
         padding-left: 60px;
         padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .timeline-item + .timeline-item {
+        margin-top: 0;
     }
 
     .timeline-item.right {
